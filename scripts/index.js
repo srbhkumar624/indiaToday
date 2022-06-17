@@ -122,3 +122,38 @@ document.getElementById('searchIcon').onclick = function() {
     document.getElementById('search').style.display = 'none';
     document.getElementById('clear').style.display = 'none';
   }
+  //headline fetch
+  const url1="https://newsdata.io/api/1/news?apikey=pub_8197fcabafb32999a0cccf108a2141410681&language=hi";
+fetch(url1).then(function(res){
+    return res.json();
+})
+.then(function(res){
+    let data1=res.results;
+      append_data(data1);
+    console.log(data1);
+    
+    
+})
+.catch(function(err){
+    console.log( err);
+})
+function append_data(data){
+    data.forEach(function(el){
+let box1=document.createElement("div");
+        let i=document.createElement("img");
+        i.src=el.image_url;
+        let c=document.createElement("h3");
+        c.innerText=el.content;
+        let d=document.createElement("h3");
+        d.innerText=el.description;
+        let l=document.createElement("h3");
+        l.innerText=el.language;
+        // let p1=document.createElement("h3");
+        // p1.innerText=pubDate;
+        let t=document.createElement("h3");
+        t.innerText=el.title;
+        box1.append(i,t,c,d,l);
+        document.getElementById("headline").append(box1);
+    })
+
+}

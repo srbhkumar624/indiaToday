@@ -103,3 +103,9 @@ body{
   #navbar :hover{
     cursor:pointer
   }
+  #headline{
+    width:800px;
+    height: 500px;
+    overflow:scroll;
+
+  }
