@@ -103,9 +103,27 @@ body{
   #navbar :hover{
     cursor:pointer
   }
+  #head{
+    display: flex;
+    justify-content: space-between;
+  }
   #headline{
-    width:800px;
+    width:600px;
     height: 500px;
     overflow:scroll;
 
+  }
+  #headline img{
+    height: 300px;
+    width: 300px;
+  }
+  #headline1{
+    width: 600px;
+    height: 500px;
+    overflow: scroll;
+    border: 1px solid red;
+  }
+  #headline1 img{
+    height:300px;
+    width: 300px;
   }
